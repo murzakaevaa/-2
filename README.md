@@ -348,4 +348,76 @@ value → input_value
 
 Стало: добавлен явный return 0
 
-5 задание
+5 задание:
+
+1. Исправления в коде
+
+1.1 Заголовочные файлы
+
+Добавлен #include <limits> для очистки буфера
+
+#include <iostream>
+
+1.2 Пространство имен
+
+Убрано using namespace std;
+
+Добавлен префикс std:: ко всем стандартным типам
+
+1.3 Имена функций (lower_case_with_underscores)
+
+FuncInsert → func_insert
+
+FuncKeyboard → func_keyboard
+
+FuncRandom → func_random
+
+FuncFile → func_file
+
+1.4 Имена переменных (snake_case)
+
+D → deque
+
+N → size
+
+MiddleIndex → middle_index
+
+MiddleElements → middle_elements
+
+1.5 Отступы
+
+Исправлены на 2 пробела
+
+Открывающие скобки { на той же строке
+
+2. Добавленные функции
+
+2.1 Безопасный ввод
+
+int safe_input(const std::string& prompt) {
+
+2.2 Обратные итераторы
+
+// Вывод дека в обратном порядке
+
+for (auto rit = deque.rbegin(); rit != deque.rend(); ++rit)
+
+2.3 Конструктор с итераторами
+
+// Замена цикла for на конструктор
+
+std::deque<int> middle_elements( deque.begin() + (middle_index - 2),deque.begin() + (middle_index + 3));
+
+3. Добавленные проверки
+
+Проверка на нечетное количество элементов
+
+Проверка на N ≥ 5
+
+Проверка на корректный ввод числа
+
+Проверка открытия файла
+
+Проверка данных в файле
+
+Проверка выбора меню
